@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(77, 86, 86);
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.flex-box > div {
+    margin: 1rem;
+}
+
+.flex-box .flex-selected {
+    margin-right: auto;
+}
+
+h1, p {
+    font-family: roboto;
+    color: white;
+}
+
+h1 {
+    margin: 2rem 0 2rem 1rem;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/*  .hidden-content
+    ------------------------
+    Här sätts sätts textens div till dold
+*/
+.hidden-content {
+    display: none;
+}
+
+/*  btn-sesame
+    ------------------------
+    Här skrivs egenskapen över så att elementet visas,
+    men eftersom .btn-sesame inte finns hos .hidden-content
+    i original html-dokumentet, så händer inget knapptryckningen 
+    anrpar JavaScriptet för att lägga till det (se DevTools)
+*/
+
+.hidden-content.btn-sesame {
+    display: block;
+}
+
+button {
+    width: 100%;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    color:white;
+    white-space: nowrap;
+    -webkit-appearance: none;
+ }
+
+ @media only screen and (max-width: 480px) {
+    .flex-box {
+      flex-direction: column;
+    }
+  }

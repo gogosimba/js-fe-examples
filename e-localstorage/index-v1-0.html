@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Local Storage</title>
+    <script type="text/javascript" src="localStorage-v1-0.js"></script>
+</head>
+
+<body>
+    <div id="formDiv">
+        <form id="carForm">
+            <h1>Local Storage</h1><br>
+            <label for="carBrand">Car</label><br>
+            <input type="text" id="carBrand" placeholder="Car brand" required autofocus><br>
+            <label for="carPrice">Price</label><br>
+            <input type="text" id="carPrice" placeholder="Price" required><br>
+            <label for="key">Key</label><br>
+            <input type="text" id="key" placeholder="Key" required><br><br>
+            <button type="submit">Store Records</button>
+        </form>
+        <br><hr><br>
+        <label for="retrieveKey">Enter Key to retrieve item</label><br>
+        <input type="text" id="retrieveKey" placeholder="retrieveKey" required><br><br>
+        <button id="retrieveButton">Retrieve records</button><br>
+        <br>
+        <hr><br>
+        <div id="retrieve"></div>
+        <label for="removeKey">Enter Key to delete item</label><br>
+        <input type="text" id="removeKey" placeholder="removeKey" required><br><br>
+        <button id="removeButton">Remove record</button>
+        <button id="clearButton">Clear all records</button>
+    </div>
+</body>
+
+</html>

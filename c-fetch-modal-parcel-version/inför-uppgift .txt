@@ -1,0 +1,54 @@
+Exempel fyra.
+
+Övningen handlar om att 
+
+1) hämta innehåll från ett öppet api
+2) omvandla dess Json till objekt
+3) använda Bootstrap för att visa det på en hemsida
+4) använda en utvecklingsmiljö (Parcel) för att distibuera lösningen
+
+Först ställer vi in utvecklingsmiljön
+
+1a) skapa nödvändiga foldrar och filer:
+	src/index.html
+	src/assets/scss/main.scss
+	src/assets/js/main.js
+	src/img/[exempelbild]
+
+1b) skapa en package.joson fil för inställningar av en package manager
+	npm init -y (y för att undvika svara på olika inställningsalternativ)
+	Detta ger att projektet körs beroende av antingen
+		att vara i utvecklingsläge (development dependency) som relaterar till lokala filer (src-folder)
+		att vara i distributionsläge (dependency) relaterar till versionen för distribution online
+
+1c) installera pacrcel (utvecklingsmilön) https://parceljs.org/
+	npm install --save-dev parcel
+	
+1d) installera Bootstrap
+	npm install bootstrap
+
+1e) Länka korrekt
+	I <head>: <link rel="stylesheet" href="./assets/scss/main.scss">
+	Innan </body>: <script type="module" src="./assets/scss/main.js">
+
+1f) Ställ in projektets inställningar för hantering med Parcel
+	"main": "index.js" ändras till 	source": "./src/index.html"
+	"test": "bla bla ..." ändras till "dev": "parcel", (notera komma)
+	och efter det lägg till "build": parcel build"
+
+1g) bygg utvecklingsprojektet för första gången
+	npm run dev
+	rätta till eventuella fel, och öppna den lokala serverns sida (syns i terminalen efter "run dev")
+
+1h) gå till Bootstraps och hämta hem valfri komponent, samt SASS länk
+	SASS länk finns på https://getbootstrap.com/docs/5.2/customize/sass/
+	Antingen hela Bootstrap (@import "../node_modules/bootstrap/scss/bootstrap";)
+	eller valda delar. Länken placeras i src/assets/scss/main.scss
+	ändra länk till @import "~bootstrap/scss/bootstrap"; (~ fås via Alt Gr + knappen för symoblen ~)
+	
+1i) För att ändra Bootstrap
+	Rekommderas att ändra dess variabler. Det är lite pill ...
+
+1j) Distrubution
+	Om inte Parcel automatiskt uppdaterar: kör alltid npm dev
+	När allt är klart och du ska leverera: kör npm run build, vilket ställer in projektet korrekt för online
