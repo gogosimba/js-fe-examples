@@ -30,7 +30,7 @@ function uniqueId(){
 // sparade loopade objekt, annars visas ett meddelande om att localStorage är tomt
 function showListOfItem() {
     let carId;
-    if (localStorage.length !== 0) {
+    if (localStorage.length !== 0)    {
         Object.keys(localStorage).forEach(function (key) {
             carId = localStorage.getItem(key);
             let p = document.createElement('p');

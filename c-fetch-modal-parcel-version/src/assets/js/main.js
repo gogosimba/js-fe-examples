@@ -9,12 +9,12 @@ let data = fetch(url)
     .then(data => {
         
         for (let i = 0; i < data.length; i++){
-            const beerID = data[i].id;
-            const beerImg = data[i].image_url;
-            const beerName = data[i].name;
-            const beerDescription = data[i].description;
-            const bim = data[i].ingredients.malt;
-            const hops = data[i].ingredients.hops;
+            beerID = data[i].id;
+            beerImg = data[i].image_url;
+            beerName = data[i].name;
+            beerDescription = data[i].description;
+            bim = data[i].ingredients.malt;
+            hops = data[i].ingredients.hops;
 
             output += `   
             <div class="card bg-light mb-4">
@@ -29,7 +29,7 @@ let data = fetch(url)
                     <li class="list-group-item"> ${bim[0].name + ", " + bim[0].amount.value + " " + bim[0].amount.unit }</li>
                 </ul> 
                 <div class="card-body mx-auto">
-                    <button id="btn" type="button" class="btn btn-secondary me-3">
+                    <button id="${beerID}" type="button" class="btn btn-secondary me-3">
                         More info
                     </button>
                     <button type="button" class="btn btn-secondary">

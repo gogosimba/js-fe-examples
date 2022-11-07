@@ -5,6 +5,7 @@ window.bootstrap = bootstrap;
 
 
 let btn;
+
 // en observer observerar om ett element verkligen är skapat i DOM eller inte
 const observer = new MutationObserver(function() {
 
